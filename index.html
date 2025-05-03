@@ -3,7 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png" type="image/png">
+
     <title>Sandra Nwankwo | Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sandra Nwankwo's professional portfolio showcasing projects, skills, and experience in web development and design.">
+    <meta name="keywords" content="Sandra Nwankwo, portfolio, web developer, front-end developer, HTML, CSS, JavaScript, React, design projects">
+    <meta name="author" content="Sandra Nwankwo">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Sandra Nwankwo | Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Sandra Nwankwo, showcasing web development projects, skills, and experience.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sandra Nwankwo | Portfolio">
+    <meta name="twitter:description" content="Sandra Nwankwo's web development portfolio featuring projects and design work.">
+    <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-portfolio-url.com">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sandra Nwankwo",
+      "url": "https://your-portfolio-url.com",
+      "image": "https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourprofile",
+        "https://twitter.com/yourhandle"
+      ],
+      "jobTitle": "Web Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelancer"
+      }
+    }
+    </script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS (Animate On Scroll) -->
@@ -1279,7 +1323,7 @@
                 </div>
                 <div class="hero-btns">
                     <a href="#contact" class="btn">Contact Me</a>
-                    <a href="[LINK_TO_CV_PDF]" class="btn btn-outline" target="_blank">Download CV</a>
+                    <a href="resume.pdf" class="btn btn-outline" download>Download CV</a>
                      <!-- Replace [LINK_TO_CV_PDF] with the actual link to her CV -->
                 </div>
             </div>
@@ -1490,7 +1534,7 @@
             <div class="section-title" data-aos="fade-up">
                 <span>My Work</span>
                 <h2>Projects</h2>
-                <p style="max-width: 600px; margin: 0 auto;">Here are a few examples of projects I've worked on or initiatives I've led. (Replace with actual projects)</p>
+                <p style="max-width: 600px; margin: 0 auto;">Here are a few examples of projects I've worked on or initiatives I've led.</p>
             </div>
             <div class="project-grid">
                 <!-- Project Card 1 (Placeholder) -->
@@ -1670,7 +1714,7 @@
                 <div class="contact-form-wrapper">
                      <h3>Send Me a Message</h3>
                     <!-- Add a backend service (like Formspree, Netlify Forms, or custom backend) to handle form submissions -->
-                    <form action="[YOUR_FORM_ENDPOINT]" method="POST" class="contact-form" id="contactForm">
+                    <form action="https://formspree.io/f/xqaqpdjp" method="POST" class="contact-form" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
