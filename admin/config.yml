@@ -5,7 +5,7 @@ backend:
   base_url: https://sandra-portfolio.nwankwostephen039.workers.dev
 
 media_folder: "assets/images"
-public_folder: "assets/images"
+public_folder: "/sandra_portfolio/assets/images"
 
 site_url: https://stenwire.github.io/sandra_portfolio/
 display_url: https://stenwire.github.io/sandra_portfolio/
