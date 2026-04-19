@@ -13,9 +13,9 @@
       "codeUrl": ""
     },
     {
-      "title": "Customer Feedback System",
-      "description": "Developed and implemented a structured system for collecting and analyzing customer feedback to drive service improvements.",
-      "image": "/api/placeholder/400/220/tech/2",
+      "title": "Airbnb Listings Analysis (2016)",
+      "description": "I explored the pricing trends by bedrooms & zip codes, listing distribution, and revenue over time\nI used Excel for data prep and Tableau for data visualization\nThis project strengthened my skills in data cleaning, dashboard design, and turning raw data into clear insights.",
+      "image": "/sandra_portfolio/assets/images/WhatsApp Image 2026-04-19 at 7.53.35 AM.jpeg",
       "tags": [
         "Customer Service",
         "Data Analysis",
