@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "date": "Jan 2024 – Feb 2025",
+      "title": "Human Resource Manager",
+      "company": "BuyDiesel Nigeria limited",
+      "bullets": [
+        "Managed candidate applications, scheduled interviews, and communicated with potential hires.",
+        "Ensured accuracy and completeness of all HR documentation and employee records.",
+        "Organized employee development programs, including training and workshops.",
+        "Resolved employee issues and promoted well-being initiatives to foster a positive work environment."
+      ]
+    },
+    {
+      "date": "Aug 2023 – Jan 2024",
+      "title": "Customer Service Representative",
+      "company": "BuyDiesel Nigeria limited",
+      "bullets": [
+        "Promptly addressed customer inquiries and concerns, boosting satisfaction and retention.",
+        "Maintained accurate transaction records, improving internal processes and efficiency."
+      ]
+    },
+    {
+      "date": "Jan 2023 – Jul 2023",
+      "title": "Community Manager",
+      "company": "Modern Skills Academy",
+      "bullets": [
+        "Increased social media engagement by 25% via strategic content planning and execution.",
+        "Fostered a positive online community, driving user interaction and connection.",
+        "Implemented feedback systems to enhance user satisfaction and engagement."
+      ]
+    },
+    {
+      "date": "2023",
+      "title": "Volunteer",
+      "company": "Beulah Medical Centre",
+      "bullets": [
+        "Assisted in providing basic medical support and care to patients.",
+        "Helped organize and maintain medical records with accuracy and confidentiality."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "icon": "fas fa-graduation-cap",
+      "date": "2015 - 2019",
+      "title": "Bachelor of Science in Agricultural Extension",
+      "subtitle": "University of Nigeria, Nsukka, Enugu State",
+      "description": "Relevant Coursework: Agricultural Economics, Rural Development, Data Analysis, Communication Skills in Extension."
+    },
+    {
+      "icon": "fas fa-certificate",
+      "date": "2024",
+      "title": "Data Analytics",
+      "subtitle": "Cisco Networking Academy",
+      "description": "Covered data collection, processing, analysis techniques, and visualization."
+    },
+    {
+      "icon": "fas fa-certificate",
+      "date": "2024",
+      "title": "Customer Relationship Management",
+      "subtitle": "Alison",
+      "description": "Focused on strategies and tools for managing customer interactions and data."
+    },
+    {
+      "icon": "fas fa-certificate",
+      "date": "2024",
+      "title": "Foundations of Project Management",
+      "subtitle": "Google (Coursera)",
+      "description": "Learned project initiation, planning, execution, and closing phases."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "seo": {
+    "title": "Sandra Nwankwo | Portfolio",
+    "description": "Sandra Nwankwo's professional portfolio showcasing projects, skills, and experience in HR, customer service, and community management.",
+    "keywords": "Sandra Nwankwo, portfolio, HR, customer service, community management, data analytics",
+    "author": "Sandra Nwankwo",
+    "ogImage": "https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png",
+    "ogUrl": "https://stenwire.github.io/sandra_portfolio/",
+    "favicon": "https://cdn.jsdelivr.net/gh/stenwire/portfolio_website@main/sten_logo.png"
+  },
+  "theme": {
+    "primary": "#4a4ae9",
+    "secondary": "#6c63ff",
+    "accent": "#3d3d92"
+  },
+  "brand": {
+    "logoFirst": "Sandra",
+    "logoLast": "Nwankwo"
+  },
+  "nav": [
+    { "label": "Home", "href": "#hero" },
+    { "label": "About", "href": "#about" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Education", "href": "#education" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "greeting": "Hello, I'm",
+    "firstName": "Chioma Sandra",
+    "lastName": "Nwankwo",
+    "typedRoles": [
+      "Human Resources Professional",
+      "Customer Service Expert",
+      "Community Manager",
+      "Problem Solver"
+    ],
+    "bio": "Detail-oriented and proactive professional skilled in HR, customer service, and community management. Eager to enhance team efficiency and success.",
+    "headshot": "assets/images/headshot.png",
+    "ctaPrimary": { "label": "Contact Me", "href": "#contact" },
+    "ctaSecondary": { "label": "Download CV", "href": "resume.pdf" }
+  },
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/sandra-nwankwo",
+    "email": "sandranwankwo021@gmail.com",
+    "twitter": "",
+    "github": ""
+  },
+  "about": {
+    "eyebrow": "Get To Know Me",
+    "title": "About Me",
+    "image": "assets/images/headshot.png",
+    "heading": "A Passionate Professional Bridging People and Processes",
+    "paragraphs": [
+      "I am a highly motivated and versatile professional with a foundation in Agricultural Extension from the University of Nigeria, Nsukka. This background provided me with strong communication, analytical, and community engagement skills, which I've successfully applied across roles in Human Resources, Customer Service, and Community Management.",
+      "My experience includes managing recruitment processes, maintaining meticulous records, enhancing customer satisfaction, fostering vibrant online communities, and contributing to positive work environments. I am proficient with data analysis tools like Microsoft Excel and possess certifications in Data Analytics, CRM, and Project Management, demonstrating my commitment to continuous learning and skill development."
+    ],
+    "skillsTab": [
+      "Human Resources Management (Recruitment, Employee Records, Development)",
+      "Customer Service & Relationship Management (CRM Certified)",
+      "Community Management & Engagement",
+      "Analytical & Problem-Solving",
+      "Data Analysis (Excel, Visualization Tools, Statistical Software)",
+      "Communication (Written, Verbal, Diverse Audiences)",
+      "Leadership & Team Collaboration",
+      "Time Management & Organization (Deadline-Oriented)",
+      "Project Management Fundamentals (Google Certified)",
+      "Administrative Support & Coordination"
+    ],
+    "experienceTab": [
+      { "title": "Human Resource Manager", "meta": "BuyDiesel Nigeria limited | Jan 2024 – Feb 2025" },
+      { "title": "Customer Service Representative", "meta": "BuyDiesel Nigeria limited | Aug 2023 – Jan 2024" },
+      { "title": "Community Manager", "meta": "Modern Skills Academy | Jan 2023 – Jul 2023" },
+      { "title": "Volunteer (Medical Support & Records)", "meta": "Beulah Medical Centre | 2023" }
+    ],
+    "educationTab": [
+      { "title": "B.Sc. Agricultural Extension", "meta": "University of Nigeria, Nsukka | 2015 - 2019" },
+      { "title": "Data Analytics Certification", "meta": "Cisco Networking Academy | 2024" },
+      { "title": "Customer Relationship Management Certification", "meta": "Alison | 2024" },
+      { "title": "Foundations of Project Management Certification", "meta": "Google | 2024" }
+    ]
+  },
+  "experienceSection": {
+    "eyebrow": "My Journey",
+    "title": "Work Experience"
+  },
+  "skillsSection": {
+    "eyebrow": "What I Offer",
+    "title": "My Skills"
+  },
+  "projectsSection": {
+    "eyebrow": "My Work",
+    "title": "Projects",
+    "intro": "Here are a few examples of projects I've worked on or initiatives I've led."
+  },
+  "educationSection": {
+    "eyebrow": "My Qualifications",
+    "title": "Education & Certifications"
+  },
+  "contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Contact Me",
+    "heading": "Contact Information",
+    "intro": "Feel free to reach out via email, phone, or LinkedIn. I'm always open to discussing new opportunities or collaborations.",
+    "formHeading": "Send Me a Message",
+    "formspreeEndpoint": "https://formspree.io/f/xqaqpdjp",
+    "location": "Ikeja, Lagos State, Nigeria",
+    "email": "sandranwankwo021@gmail.com",
+    "phoneDisplay": "0808 556 8256",
+    "phoneTel": "+2348085568256",
+    "linkedinUrl": "https://www.linkedin.com/in/sandra-nwankwo",
+    "linkedinDisplay": "linkedin.com/in/sandra-nwankwo"
+  },
+  "footer": {
+    "bio": "Proactive professional passionate about HR, customer success, and efficient team collaboration.",
+    "location": "Ikeja, Lagos, Nigeria",
+    "copyrightName": "Chioma Sandra Nwankwo",
+    "quickLinks": [
+      { "label": "About Me", "href": "#about" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  }
+}

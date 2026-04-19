@@ -1288,491 +1288,54 @@
     <!-- Header -->
     <header id="header">
         <div class="container navbar">
-            <a href="#hero" class="logo">Sandra<span>Nwankwo</span></a>
+            <a href="#hero" class="logo" id="logo"></a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+            <ul class="nav-menu" id="nav-menu"></ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="container hero-content">
-            <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
-                <h3>Hello, I'm</h3>
-                <h1><span>Chioma Sandra</span> Nwankwo</h1>
-                <h3>A <span class="typed-text"></span></h3>
-                <p>Detail-oriented and proactive professional skilled in HR, customer service, and community management. Eager to enhance team efficiency and success.</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/sandra-nwankwo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:sandranwankwo021@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <!-- Add other social links if available -->
-                     <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                     <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn">Contact Me</a>
-                    <a href="resume.pdf" class="btn btn-outline" download>Download CV</a>
-                     <!-- Replace [LINK_TO_CV_PDF] with the actual link to her CV -->
-                </div>
-            </div>
-            <div class="hero-img" data-aos="fade-left" data-aos-delay="400">
-                <!-- === REPLACE WITH ACTUAL IMAGE === -->
-                <img src="headshot_1.png" alt="Chioma Sandra Nwankwo">
-                <!-- Example using a placeholder. Use a real photo. -->
-            </div>
-        </div>
+        <div class="container hero-content" id="hero-content"></div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>Get To Know Me</span>
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-img" data-aos="fade-right" data-aos-delay="200">
-                    <!-- === REPLACE WITH ACTUAL IMAGE === -->
-                    <img src="headshot_1.png" alt="About Sandra Nwankwo">
-                     <!-- Example using a placeholder. Use a real photo. -->
-                </div>
-                <div class="about-text" data-aos="fade-left" data-aos-delay="400">
-                    <h3>A Passionate Professional Bridging People and Processes</h3>
-                    <p>I am a highly motivated and versatile professional with a foundation in Agricultural Extension from the University of Nigeria, Nsukka. This background provided me with strong communication, analytical, and community engagement skills, which I've successfully applied across roles in Human Resources, Customer Service, and Community Management.</p>
-                    <p>My experience includes managing recruitment processes, maintaining meticulous records, enhancing customer satisfaction, fostering vibrant online communities, and contributing to positive work environments. I am proficient with data analysis tools like Microsoft Excel and possess certifications in Data Analytics, CRM, and Project Management, demonstrating my commitment to continuous learning and skill development.</p>
-
-                    <div class="tab-titles">
-                        <button class="tab-link active" onclick="openTab('skills-tab', this)">Skills</button>
-                        <button class="tab-link" onclick="openTab('experience-tab', this)">Experience</button>
-                        <button class="tab-link" onclick="openTab('education-tab', this)">Education</button>
-                    </div>
-
-                    <div class="tab-content active" id="skills-tab" data-aos="fade-up">
-                        <ul>
-                            <li>Human Resources Management (Recruitment, Employee Records, Development)</li>
-                            <li>Customer Service & Relationship Management (CRM Certified)</li>
-                            <li>Community Management & Engagement</li>
-                            <li>Analytical & Problem-Solving</li>
-                            <li>Data Analysis (Excel, Visualization Tools, Statistical Software)</li>
-                            <li>Communication (Written, Verbal, Diverse Audiences)</li>
-                            <li>Leadership & Team Collaboration</li>
-                            <li>Time Management & Organization (Deadline-Oriented)</li>
-                            <li>Project Management Fundamentals (Google Certified)</li>
-                             <li>Administrative Support & Coordination</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content" id="experience-tab">
-                        <ul>
-                            <li>Human Resource Manager <span>BuyDiesel Nigeria limited | Jan 2024 – Feb 2025</span></li>
-                            <li>Customer Service Representative <span>BuyDiesel Nigeria limited | Aug 2023 – Jan 2024</span></li>
-                            <li>Community Manager <span>Modern Skills Academy | Jan 2023 – Jul 2023</span></li>
-                             <li>Volunteer (Medical Support & Records) <span>Beulah Medical Centre | 2023</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-content" id="education-tab">
-                        <ul>
-                            <li>B.Sc. Agricultural Extension <span>University of Nigeria, Nsukka | 2015 - 2019</span></li>
-                            <li>Data Analytics Certification <span>Cisco Networking Academy | 2024</span></li>
-                            <li>Customer Relationship Management Certification <span>Alison | 2024</span></li>
-                            <li>Foundations of Project Management Certification <span>Google | 2024</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="container" id="about-container"></div>
     </section>
 
      <!-- Experience Section -->
     <section id="experience">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>My Journey</span>
-                <h2>Work Experience</h2>
-            </div>
-            <div class="timeline">
-                <!-- Item 1: HR Manager -->
-                <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Jan 2024 – Feb 2025</span>
-                        <h3 class="timeline-title">Human Resource Manager</h3>
-                        <span class="timeline-company">BuyDiesel Nigeria limited</span>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Managed candidate applications, scheduled interviews, and communicated with potential hires.</li>
-                                <li>Ensured accuracy and completeness of all HR documentation and employee records.</li>
-                                <li>Organized employee development programs, including training and workshops.</li>
-                                <li>Resolved employee issues and promoted well-being initiatives to foster a positive work environment.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2: Customer Service Rep -->
-                 <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Aug 2023 – Jan 2024</span>
-                        <h3 class="timeline-title">Customer Service Representative</h3>
-                        <span class="timeline-company">BuyDiesel Nigeria limited</span>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Promptly addressed customer inquiries and concerns, boosting satisfaction and retention.</li>
-                                <li>Maintained accurate transaction records, improving internal processes and efficiency.</li>
-                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3: Community Manager -->
-                <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Jan 2023 – Jul 2023</span>
-                        <h3 class="timeline-title">Community Manager</h3>
-                        <span class="timeline-company">Modern Skills Academy</span>
-                        <div class="timeline-desc">
-                             <ul>
-                                <li>Increased social media engagement by 25% via strategic content planning and execution.</li>
-                                <li>Fostered a positive online community, driving user interaction and connection.</li>
-                                <li>Implemented feedback systems to enhance user satisfaction and engagement.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4: Volunteer -->
-                 <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023</span>
-                        <h3 class="timeline-title">Volunteer</h3>
-                        <span class="timeline-company">Beulah Medical Centre</span>
-                        <div class="timeline-desc">
-                            <ul>
-                                <li>Assisted in providing basic medical support and care to patients.</li>
-                                <li>Helped organize and maintain medical records with accuracy and confidentiality.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <div class="container" id="experience-container"></div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>What I Offer</span>
-                <h2>My Skills</h2>
-            </div>
-            <div class="skills-content">
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-users-cog"></i>
-                    <h3>HR Management</h3>
-                    <p>Recruitment, onboarding, employee relations, record keeping, and development program coordination.</p>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                     <i class="fas fa-headset"></i>
-                    <h3>Customer Service</h3>
-                    <p>Handling inquiries, resolving issues, maintaining satisfaction, and managing relationships (CRM).</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-comments"></i>
-                    <h3>Community Engagement</h3>
-                    <p>Building online communities, content strategy, fostering interaction, and managing feedback.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data Analysis</h3>
-                    <p>Proficient in Excel, data visualization tools, and basic statistical software for insights.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Communication</h3>
-                    <p>Strong written and verbal skills, adept at engaging diverse audiences effectively.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h3>Problem-Solving</h3>
-                    <p>Ability to assess complex issues, devise effective solutions, and implement them efficiently.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-users"></i>
-                    <h3>Leadership & Teamwork</h3>
-                    <p>Effective collaborator and leader focused on enhancing group performance and achieving goals.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-clock"></i>
-                    <h3>Time Management</h3>
-                    <p>Skilled in managing multiple tasks, meeting deadlines, and ensuring accuracy in all duties.</p>
-                </div>
-                 <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Project Management</h3>
-                    <p>Understanding of project lifecycles, planning, and execution principles (Google Certified).</p>
-                </div>
-            </div>
-        </div>
+        <div class="container" id="skills-container"></div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>My Work</span>
-                <h2>Projects</h2>
-                <p style="max-width: 600px; margin: 0 auto;">Here are a few examples of projects I've worked on or initiatives I've led.</p>
-            </div>
-            <div class="project-grid">
-                <!-- Project Card 1 (Placeholder) -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-img">
-                         <!-- === REPLACE WITH ACTUAL IMAGE === -->
-                        <img src="/api/placeholder/400/220/tech/1" alt="Project 1">
-                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Employee Onboarding Enhancement</h3>
-                        <p>Revamped the company's onboarding process to improve new hire integration and reduce initial turnover.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HR</span>
-                            <span class="project-tag">Process Improvement</span>
-                            <span class="project-tag">Documentation</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 2 (Placeholder) -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-img">
-                        <!-- === REPLACE WITH ACTUAL IMAGE === -->
-                        <img src="/api/placeholder/400/220/tech/2" alt="Project 2">
-                         <div class="project-overlay">
-                             <div class="project-links">
-                                <a href="#" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Customer Feedback System</h3>
-                        <p>Developed and implemented a structured system for collecting and analyzing customer feedback to drive service improvements.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Customer Service</span>
-                            <span class="project-tag">Data Analysis</span>
-                            <span class="project-tag">Feedback Loop</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 3 (Placeholder) -->
-                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-img">
-                        <!-- === REPLACE WITH ACTUAL IMAGE === -->
-                        <img src="/api/placeholder/400/220/tech/3" alt="Project 3">
-                         <div class="project-overlay">
-                             <div class="project-links">
-                                <a href="#" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" target="_blank" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Online Community Growth Strategy</h3>
-                        <p>Led a content and engagement strategy that resulted in a 25% increase in social media interaction for an online academy.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Community Management</span>
-                            <span class="project-tag">Social Media</span>
-                             <span class="project-tag">Content Strategy</span>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Add more project cards as needed -->
-            </div>
-        </div>
+        <div class="container" id="projects-container"></div>
     </section>
 
     <!-- Education & Certifications Section -->
     <section id="education">
-         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <span>My Qualifications</span>
-                <h2>Education & Certifications</h2>
-            </div>
-            <div class="education-grid">
-                <!-- Degree Card -->
-                 <div class="education-card" data-aos="fade-up" data-aos-delay="100">
-                     <div class="education-icon">
-                         <i class="fas fa-graduation-cap"></i>
-                     </div>
-                     <div class="education-details">
-                        <span class="education-date">2015 - 2019</span>
-                        <h3 class="education-title">Bachelor of Science in Agricultural Extension</h3>
-                        <p class="education-subtitle">University of Nigeria, Nsukka, Enugu State</p>
-                         <p class="education-description">Relevant Coursework: Agricultural Economics, Rural Development, Data Analysis, Communication Skills in Extension.</p>
-                     </div>
-                 </div>
-                 <!-- Certification Card 1 -->
-                 <div class="education-card" data-aos="fade-up" data-aos-delay="200">
-                      <div class="education-icon">
-                         <i class="fas fa-certificate"></i>
-                     </div>
-                     <div class="education-details">
-                         <span class="education-date">2024</span>
-                        <h3 class="education-title">Data Analytics</h3>
-                        <p class="education-subtitle">Cisco Networking Academy</p>
-                         <p class="education-description">Covered data collection, processing, analysis techniques, and visualization.</p>
-                     </div>
-                 </div>
-                 <!-- Certification Card 2 -->
-                 <div class="education-card" data-aos="fade-up" data-aos-delay="300">
-                      <div class="education-icon">
-                         <i class="fas fa-certificate"></i>
-                     </div>
-                     <div class="education-details">
-                         <span class="education-date">2024</span>
-                        <h3 class="education-title">Customer Relationship Management</h3>
-                        <p class="education-subtitle">Alison</p>
-                         <p class="education-description">Focused on strategies and tools for managing customer interactions and data.</p>
-                     </div>
-                 </div>
-                 <!-- Certification Card 3 -->
-                 <div class="education-card" data-aos="fade-up" data-aos-delay="400">
-                      <div class="education-icon">
-                          <i class="fas fa-certificate"></i>
-                     </div>
-                     <div class="education-details">
-                        <span class="education-date">2024</span>
-                        <h3 class="education-title">Foundations of Project Management</h3>
-                        <p class="education-subtitle">Google (Coursera)</p>
-                         <p class="education-description">Learned project initiation, planning, execution, and closing phases.</p>
-                     </div>
-                 </div>
-            </div>
-        </div>
+         <div class="container" id="education-container"></div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-             <div class="section-title" data-aos="fade-up">
-                <span>Get In Touch</span>
-                <h2>Contact Me</h2>
-            </div>
-            <div class="contact-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="contact-info-wrapper">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out via email, phone, or LinkedIn. I'm always open to discussing new opportunities or collaborations.</p>
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Ikeja, Lagos State, Nigeria</p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p><a href="mailto:sandranwankwo021@gmail.com">sandranwankwo021@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="contact-details">
-                                <h4>Phone</h4>
-                                <p><a href="tel:+2348085568256">0808 556 8256</a></p> <!-- Use tel: link -->
-                            </div>
-                        </div>
-                        <div class="contact-card">
-                             <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
-                             <div class="contact-details">
-                                <h4>LinkedIn</h4>
-                                <p><a href="https://www.linkedin.com/in/sandra-nwankwo" target="_blank">linkedin.com/in/sandra-nwankwo</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                     <h3>Send Me a Message</h3>
-                    <!-- Add a backend service (like Formspree, Netlify Forms, or custom backend) to handle form submissions -->
-                    <form action="https://formspree.io/f/xqaqpdjp" method="POST" class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                             <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                         <p id="form-status" style="margin-top: 15px; font-weight: 600;"></p> <!-- Status message area -->
-                    </form>
-                </div>
-            </div>
-        </div>
+        <div class="container" id="contact-container"></div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="#hero" class="logo">Sandra<span>Nwankwo</span></a>
-                    <p>Proactive professional passionate about HR, customer success, and efficient team collaboration.</p>
-                    <div class="social-icons">
-                         <a href="https://www.linkedin.com/in/sandra-nwankwo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                         <a href="mailto:sandranwankwo021@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                         <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                         <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Ikeja, Lagos, Nigeria</p>
-                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+2348085568256">0808 556 8256</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:sandranwankwo021@gmail.com">sandranwankwo021@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="copyright">
-                © <span id="year"></span> Chioma Sandra Nwankwo. All Rights Reserved.
-                <!-- Optional: Designed by <a href="#">Your Name/Link</a> -->
-            </div>
-        </div>
+        <div class="container" id="footer-container"></div>
     </footer>
 
     <!-- Scroll to top button -->
@@ -1786,156 +1349,382 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script>
-        // --- Preloader ---
-        const preloader = document.querySelector('.preloader');
-        window.addEventListener('load', () => {
-            preloader.classList.add('fade-out');
-        });
+    (async function () {
+        const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
+            { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+        ));
+        const attr = (s) => esc(s);
 
-        // --- AOS Initialization ---
-        AOS.init({
-            duration: 800, // Animation duration
-            once: true      // Animation happens only once
-        });
+        // --- Load content ---
+        let settings, experience, skills, projects, education;
+        try {
+            [settings, experience, skills, projects, education] = await Promise.all([
+                fetch('content/settings.json',   { cache: 'no-cache' }).then(r => r.json()),
+                fetch('content/experience.json', { cache: 'no-cache' }).then(r => r.json()).then(d => d.items || []),
+                fetch('content/skills.json',     { cache: 'no-cache' }).then(r => r.json()).then(d => d.items || []),
+                fetch('content/projects.json',   { cache: 'no-cache' }).then(r => r.json()).then(d => d.items || []),
+                fetch('content/education.json',  { cache: 'no-cache' }).then(r => r.json()).then(d => d.items || []),
+            ]);
+        } catch (err) {
+            console.error('Failed to load content:', err);
+            const p = document.querySelector('.preloader');
+            if (p) {
+                p.innerHTML = '<div style="text-align:center;max-width:480px;padding:20px;">' +
+                    '<h3 style="margin-bottom:8px;">Content failed to load</h3>' +
+                    '<p style="color:#555;margin-bottom:16px;">' + esc(err.message || err) + '</p>' +
+                    '<button onclick="location.reload()" style="padding:10px 20px;border:none;background:#4a4ae9;color:#fff;border-radius:6px;cursor:pointer;">Retry</button>' +
+                '</div>';
+            }
+            return;
+        }
 
-        // --- Sticky Header ---
+        // --- Apply theme & meta ---
+        const root = document.documentElement;
+        if (settings.theme) {
+            if (settings.theme.primary)   root.style.setProperty('--primary-color',   settings.theme.primary);
+            if (settings.theme.secondary) root.style.setProperty('--secondary-color', settings.theme.secondary);
+            if (settings.theme.accent)    root.style.setProperty('--accent-color',    settings.theme.accent);
+        }
+        if (settings.seo) {
+            if (settings.seo.title) document.title = settings.seo.title;
+            const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el && val) el.setAttribute('content', val); };
+            setMeta('meta[name="description"]', settings.seo.description);
+            setMeta('meta[name="keywords"]', settings.seo.keywords);
+            setMeta('meta[name="author"]', settings.seo.author);
+            setMeta('meta[property="og:title"]', settings.seo.title);
+            setMeta('meta[property="og:description"]', settings.seo.description);
+            setMeta('meta[property="og:image"]', settings.seo.ogImage);
+            setMeta('meta[property="og:url"]', settings.seo.ogUrl);
+            setMeta('meta[name="twitter:title"]', settings.seo.title);
+            setMeta('meta[name="twitter:description"]', settings.seo.description);
+            setMeta('meta[name="twitter:image"]', settings.seo.ogImage);
+            const favicon = document.querySelector('link[rel="icon"]');
+            if (favicon && settings.seo.favicon) favicon.setAttribute('href', settings.seo.favicon);
+        }
+
+        // --- Header ---
+        const brand = settings.brand || { logoFirst: '', logoLast: '' };
+        document.getElementById('logo').innerHTML = esc(brand.logoFirst) + '<span>' + esc(brand.logoLast) + '</span>';
+        document.getElementById('nav-menu').innerHTML = (settings.nav || []).map(n =>
+            '<li><a href="' + attr(n.href) + '" class="nav-link">' + esc(n.label) + '</a></li>'
+        ).join('');
+
+        // --- Social icons helper ---
+        const socials = settings.socials || {};
+        const socialLinks = () => {
+            const out = [];
+            if (socials.linkedin) out.push('<a href="' + attr(socials.linkedin) + '" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>');
+            if (socials.email)    out.push('<a href="mailto:' + attr(socials.email) + '" aria-label="Email"><i class="fas fa-envelope"></i></a>');
+            if (socials.twitter)  out.push('<a href="' + attr(socials.twitter) + '" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>');
+            if (socials.github)   out.push('<a href="' + attr(socials.github) + '" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>');
+            return out.join('');
+        };
+
+        // --- Hero ---
+        const hero = settings.hero || {};
+        document.getElementById('hero-content').innerHTML =
+            '<div class="hero-text" data-aos="fade-right" data-aos-delay="200">' +
+                '<h3>' + esc(hero.greeting) + '</h3>' +
+                '<h1><span>' + esc(hero.firstName) + '</span> ' + esc(hero.lastName) + '</h1>' +
+                '<h3>A <span class="typed-text"></span></h3>' +
+                '<p>' + esc(hero.bio) + '</p>' +
+                '<div class="social-icons">' + socialLinks() + '</div>' +
+                '<div class="hero-btns">' +
+                    (hero.ctaPrimary   ? '<a href="' + attr(hero.ctaPrimary.href)   + '" class="btn">' + esc(hero.ctaPrimary.label) + '</a>' : '') +
+                    (hero.ctaSecondary ? '<a href="' + attr(hero.ctaSecondary.href) + '" class="btn btn-outline" download>' + esc(hero.ctaSecondary.label) + '</a>' : '') +
+                '</div>' +
+            '</div>' +
+            '<div class="hero-img" data-aos="fade-left" data-aos-delay="400">' +
+                '<img src="' + attr(hero.headshot) + '" alt="' + attr(hero.firstName + ' ' + hero.lastName) + '">' +
+            '</div>';
+
+        // --- About ---
+        const about = settings.about || {};
+        document.getElementById('about-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(about.eyebrow) + '</span>' +
+                '<h2>' + esc(about.title) + '</h2>' +
+            '</div>' +
+            '<div class="about-content">' +
+                '<div class="about-img" data-aos="fade-right" data-aos-delay="200">' +
+                    '<img src="' + attr(about.image) + '" alt="About ' + attr((hero.firstName || '') + ' ' + (hero.lastName || '')) + '">' +
+                '</div>' +
+                '<div class="about-text" data-aos="fade-left" data-aos-delay="400">' +
+                    '<h3>' + esc(about.heading) + '</h3>' +
+                    (about.paragraphs || []).map(p => '<p>' + esc(p) + '</p>').join('') +
+                    '<div class="tab-titles">' +
+                        '<button class="tab-link active" onclick="openTab(\'skills-tab\', this)">Skills</button>' +
+                        '<button class="tab-link" onclick="openTab(\'experience-tab\', this)">Experience</button>' +
+                        '<button class="tab-link" onclick="openTab(\'education-tab\', this)">Education</button>' +
+                    '</div>' +
+                    '<div class="tab-content active" id="skills-tab" data-aos="fade-up"><ul>' +
+                        (about.skillsTab || []).map(s => '<li>' + esc(s) + '</li>').join('') +
+                    '</ul></div>' +
+                    '<div class="tab-content" id="experience-tab"><ul>' +
+                        (about.experienceTab || []).map(i => '<li>' + esc(i.title) + ' <span>' + esc(i.meta) + '</span></li>').join('') +
+                    '</ul></div>' +
+                    '<div class="tab-content" id="education-tab"><ul>' +
+                        (about.educationTab || []).map(i => '<li>' + esc(i.title) + ' <span>' + esc(i.meta) + '</span></li>').join('') +
+                    '</ul></div>' +
+                '</div>' +
+            '</div>';
+
+        // --- Experience ---
+        const expSect = settings.experienceSection || {};
+        document.getElementById('experience-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(expSect.eyebrow) + '</span>' +
+                '<h2>' + esc(expSect.title) + '</h2>' +
+            '</div>' +
+            '<div class="timeline">' +
+                experience.map((e, idx) => {
+                    const side = idx % 2 === 0 ? 'right' : 'left';
+                    const aos  = idx % 2 === 0 ? 'fade-left' : 'fade-right';
+                    return '<div class="timeline-item ' + side + '" data-aos="' + aos + '">' +
+                        '<div class="timeline-content">' +
+                            '<span class="timeline-date">' + esc(e.date) + '</span>' +
+                            '<h3 class="timeline-title">' + esc(e.title) + '</h3>' +
+                            '<span class="timeline-company">' + esc(e.company) + '</span>' +
+                            '<div class="timeline-desc"><ul>' +
+                                (e.bullets || []).map(b => '<li>' + esc(b) + '</li>').join('') +
+                            '</ul></div>' +
+                        '</div>' +
+                    '</div>';
+                }).join('') +
+            '</div>';
+
+        // --- Skills ---
+        const skSect = settings.skillsSection || {};
+        document.getElementById('skills-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(skSect.eyebrow) + '</span>' +
+                '<h2>' + esc(skSect.title) + '</h2>' +
+            '</div>' +
+            '<div class="skills-content">' +
+                skills.map((s, i) => {
+                    const delay = ((i % 3) + 1) * 100;
+                    return '<div class="skill-card" data-aos="zoom-in" data-aos-delay="' + delay + '">' +
+                        '<i class="' + attr(s.icon) + '"></i>' +
+                        '<h3>' + esc(s.title) + '</h3>' +
+                        '<p>' + esc(s.description) + '</p>' +
+                    '</div>';
+                }).join('') +
+            '</div>';
+
+        // --- Projects ---
+        const prSect = settings.projectsSection || {};
+        document.getElementById('projects-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(prSect.eyebrow) + '</span>' +
+                '<h2>' + esc(prSect.title) + '</h2>' +
+                (prSect.intro ? '<p style="max-width: 600px; margin: 0 auto;">' + esc(prSect.intro) + '</p>' : '') +
+            '</div>' +
+            '<div class="project-grid">' +
+                projects.map((p, i) => {
+                    const delay = ((i % 3) + 1) * 100;
+                    const links = [];
+                    if (p.liveUrl) links.push('<a href="' + attr(p.liveUrl) + '" target="_blank" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>');
+                    if (p.codeUrl) links.push('<a href="' + attr(p.codeUrl) + '" target="_blank" aria-label="Code Repository"><i class="fab fa-github"></i></a>');
+                    return '<div class="project-card" data-aos="fade-up" data-aos-delay="' + delay + '">' +
+                        '<div class="project-img">' +
+                            '<img src="' + attr(p.image) + '" alt="' + attr(p.title) + '">' +
+                            (links.length ? '<div class="project-overlay"><div class="project-links">' + links.join('') + '</div></div>' : '') +
+                        '</div>' +
+                        '<div class="project-content">' +
+                            '<h3 class="project-title">' + esc(p.title) + '</h3>' +
+                            '<p>' + esc(p.description) + '</p>' +
+                            '<div class="project-tags">' +
+                                (p.tags || []).map(t => '<span class="project-tag">' + esc(t) + '</span>').join('') +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+                }).join('') +
+            '</div>';
+
+        // --- Education ---
+        const edSect = settings.educationSection || {};
+        document.getElementById('education-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(edSect.eyebrow) + '</span>' +
+                '<h2>' + esc(edSect.title) + '</h2>' +
+            '</div>' +
+            '<div class="education-grid">' +
+                education.map((e, i) => {
+                    const delay = ((i % 4) + 1) * 100;
+                    return '<div class="education-card" data-aos="fade-up" data-aos-delay="' + delay + '">' +
+                        '<div class="education-icon"><i class="' + attr(e.icon) + '"></i></div>' +
+                        '<div class="education-details">' +
+                            '<span class="education-date">' + esc(e.date) + '</span>' +
+                            '<h3 class="education-title">' + esc(e.title) + '</h3>' +
+                            '<p class="education-subtitle">' + esc(e.subtitle) + '</p>' +
+                            '<p class="education-description">' + esc(e.description) + '</p>' +
+                        '</div>' +
+                    '</div>';
+                }).join('') +
+            '</div>';
+
+        // --- Contact ---
+        const contact = settings.contact || {};
+        document.getElementById('contact-container').innerHTML =
+            '<div class="section-title" data-aos="fade-up">' +
+                '<span>' + esc(contact.eyebrow) + '</span>' +
+                '<h2>' + esc(contact.title) + '</h2>' +
+            '</div>' +
+            '<div class="contact-box" data-aos="fade-up" data-aos-delay="100">' +
+                '<div class="contact-info-wrapper">' +
+                    '<h3>' + esc(contact.heading) + '</h3>' +
+                    '<p>' + esc(contact.intro) + '</p>' +
+                    '<div class="contact-info">' +
+                        (contact.location ? '<div class="contact-card">' +
+                            '<div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>' +
+                            '<div class="contact-details"><h4>Location</h4><p>' + esc(contact.location) + '</p></div>' +
+                        '</div>' : '') +
+                        (contact.email ? '<div class="contact-card">' +
+                            '<div class="contact-icon"><i class="fas fa-envelope"></i></div>' +
+                            '<div class="contact-details"><h4>Email</h4><p><a href="mailto:' + attr(contact.email) + '">' + esc(contact.email) + '</a></p></div>' +
+                        '</div>' : '') +
+                        (contact.phoneDisplay ? '<div class="contact-card">' +
+                            '<div class="contact-icon"><i class="fas fa-phone-alt"></i></div>' +
+                            '<div class="contact-details"><h4>Phone</h4><p><a href="tel:' + attr(contact.phoneTel || contact.phoneDisplay) + '">' + esc(contact.phoneDisplay) + '</a></p></div>' +
+                        '</div>' : '') +
+                        (contact.linkedinUrl ? '<div class="contact-card">' +
+                            '<div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>' +
+                            '<div class="contact-details"><h4>LinkedIn</h4><p><a href="' + attr(contact.linkedinUrl) + '" target="_blank">' + esc(contact.linkedinDisplay || contact.linkedinUrl) + '</a></p></div>' +
+                        '</div>' : '') +
+                    '</div>' +
+                '</div>' +
+                '<div class="contact-form-wrapper">' +
+                    '<h3>' + esc(contact.formHeading) + '</h3>' +
+                    '<form action="' + attr(contact.formspreeEndpoint || '') + '" method="POST" class="contact-form" id="contactForm">' +
+                        '<div class="form-row">' +
+                            '<div class="form-group"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>' +
+                            '<div class="form-group"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div>' +
+                        '</div>' +
+                        '<div class="form-group"><input type="text" name="subject" class="form-control" placeholder="Subject" required></div>' +
+                        '<div class="form-group"><textarea name="message" class="form-control" placeholder="Your Message" required></textarea></div>' +
+                        '<button type="submit" class="btn">Send Message</button>' +
+                        '<p id="form-status" style="margin-top: 15px; font-weight: 600;"></p>' +
+                    '</form>' +
+                '</div>' +
+            '</div>';
+
+        // --- Footer ---
+        const footer = settings.footer || {};
+        document.getElementById('footer-container').innerHTML =
+            '<div class="footer-content">' +
+                '<div class="footer-about">' +
+                    '<a href="#hero" class="logo">' + esc(brand.logoFirst) + '<span>' + esc(brand.logoLast) + '</span></a>' +
+                    '<p>' + esc(footer.bio) + '</p>' +
+                    '<div class="social-icons">' + socialLinks() + '</div>' +
+                '</div>' +
+                '<div class="footer-links">' +
+                    '<h4>Quick Links</h4>' +
+                    '<ul>' + (footer.quickLinks || []).map(l =>
+                        '<li><a href="' + attr(l.href) + '">' + esc(l.label) + '</a></li>'
+                    ).join('') + '</ul>' +
+                '</div>' +
+                '<div class="footer-contact">' +
+                    '<h4>Contact Info</h4>' +
+                    (footer.location      ? '<p><i class="fas fa-map-marker-alt"></i> ' + esc(footer.location) + '</p>' : '') +
+                    (contact.phoneDisplay ? '<p><i class="fas fa-phone-alt"></i> <a href="tel:' + attr(contact.phoneTel || contact.phoneDisplay) + '">' + esc(contact.phoneDisplay) + '</a></p>' : '') +
+                    (contact.email        ? '<p><i class="fas fa-envelope"></i> <a href="mailto:' + attr(contact.email) + '">' + esc(contact.email) + '</a></p>' : '') +
+                '</div>' +
+            '</div>' +
+            '<div class="copyright">© <span id="year"></span> ' + esc(footer.copyrightName || '') + '. All Rights Reserved.</div>';
+
+        // --- Post-render wiring ---
+
+        // Footer year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Sticky header on scroll
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
+            header.classList.toggle('sticky', window.scrollY > 50);
         });
 
-        // --- Hamburger Menu ---
+        // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
-
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-
-        navLinks.forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
         });
 
-         // --- Active Nav Link Highlighting on Scroll ---
-         const sections = document.querySelectorAll('section[id]');
-         window.addEventListener('scroll', navHighlighter);
-
-         function navHighlighter() {
-            let scrollY = window.pageYOffset;
-            sections.forEach(current => {
+        // Active nav link highlighting
+        const sectionEls = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.pageYOffset;
+            sectionEls.forEach(current => {
+                const sectionTop = current.offsetTop - 100;
                 const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100; // Adjusted offset
-                let sectionId = current.getAttribute('id');
-
+                const sectionId = current.getAttribute('id');
+                const link = document.querySelector('.nav-menu a[href="#' + sectionId + '"]');
+                if (!link) return;
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
+                    link.classList.add('active-link');
                 } else {
-                     document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
+                    link.classList.remove('active-link');
                 }
             });
-         }
-
-
-        // --- Typed.js ---
-        const typed = new Typed('.typed-text', {
-            strings: ['Human Resources Professional', 'Customer Service Expert', 'Community Manager', 'Problem Solver'],
-            typeSpeed: 70,
-            backSpeed: 50,
-            backDelay: 1500,
-            loop: true
         });
 
-        // --- About Section Tabs ---
-        function openTab(tabName, elmnt) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            elmnt.classList.add("active");
-        }
-        // Activate the first tab by default
-         document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector('.tab-link.active').click();
-        });
-
-
-        // --- Scroll-to-Top Button ---
+        // Scroll-to-top button
         const scrollTopBtn = document.getElementById('scroll-top');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) { // Show button after scrolling 300px
-                scrollTopBtn.classList.add('active');
-            } else {
-                scrollTopBtn.classList.remove('active');
-            }
+            scrollTopBtn.classList.toggle('active', window.scrollY > 300);
         });
-
-         scrollTopBtn.addEventListener('click', (e) => {
-             e.preventDefault(); // Prevent default anchor behavior
-             window.scrollTo({
-                 top: 0,
-                 behavior: 'smooth'
-             });
-         });
-
-         // --- Footer Year ---
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // --- Basic Contact Form Handling (Example using Fetch API) ---
-        // --- Requires a form endpoint (like Formspree) ---
-        /*
-        const contactForm = document.getElementById('contactForm');
-        const formStatus = document.getElementById('form-status');
-
-        contactForm.addEventListener('submit', function(e) {
+        scrollTopBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const formData = new FormData(contactForm);
-            const formAction = contactForm.getAttribute('action'); // Get endpoint URL
-
-            fetch(formAction, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    formStatus.textContent = "Message sent successfully!";
-                    formStatus.style.color = 'green';
-                    contactForm.reset();
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                             formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
-                        } else {
-                             formStatus.textContent = "Oops! There was a problem submitting your form";
-                         }
-                         formStatus.style.color = 'red';
-                    })
-                }
-            }).catch(error => {
-                formStatus.textContent = "Oops! There was a problem submitting your form";
-                formStatus.style.color = 'red';
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        */
 
+        // About tabs — activate first by default
+        const firstTab = document.querySelector('.tab-link.active');
+        if (firstTab) firstTab.click();
+
+        // Animations
+        if (window.AOS) AOS.init({ duration: 800, once: true });
+        if (window.Typed && Array.isArray(hero.typedRoles) && hero.typedRoles.length) {
+            new Typed('.typed-text', {
+                strings: hero.typedRoles,
+                typeSpeed: 70,
+                backSpeed: 50,
+                backDelay: 1500,
+                loop: true
+            });
+        }
+
+        // Hide preloader
+        const preloader = document.querySelector('.preloader');
+        if (preloader) preloader.classList.add('fade-out');
+    })();
+
+    // Tab switcher is invoked from inline onclick attributes, must be global.
+    function openTab(tabName, elmnt) {
+        const tabcontent = document.getElementsByClassName('tab-content');
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = 'none';
+            tabcontent[i].classList.remove('active');
+        }
+        const tablinks = document.getElementsByClassName('tab-link');
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove('active');
+        }
+        const target = document.getElementById(tabName);
+        if (target) {
+            target.style.display = 'block';
+            target.classList.add('active');
+        }
+        elmnt.classList.add('active');
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,249 @@
+backend:
+  name: github
+  repo: stenwire/sandra_portfolio
+  branch: main
+  base_url: https://sandra-portfolio.nwankwostephen039.workers.dev
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+site_url: https://stenwire.github.io/sandra_portfolio/
+display_url: https://stenwire.github.io/sandra_portfolio/
+
+collections:
+  - name: settings
+    label: Site Settings
+    delete: false
+    editor: { preview: false }
+    files:
+      - label: General (SEO, Theme, Brand, Nav)
+        name: general
+        file: content/settings.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - { label: Page Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Keywords, name: keywords, widget: string }
+              - { label: Author, name: author, widget: string }
+              - { label: OG Image (URL), name: ogImage, widget: string }
+              - { label: OG URL, name: ogUrl, widget: string }
+              - { label: Favicon (URL), name: favicon, widget: string }
+
+          - label: Theme Colors
+            name: theme
+            widget: object
+            fields:
+              - { label: Primary, name: primary, widget: color, enableAlpha: false, allowInput: true }
+              - { label: Secondary, name: secondary, widget: color, enableAlpha: false, allowInput: true }
+              - { label: Accent, name: accent, widget: color, enableAlpha: false, allowInput: true }
+
+          - label: Brand / Logo Text
+            name: brand
+            widget: object
+            fields:
+              - { label: Logo First Word, name: logoFirst, widget: string }
+              - { label: Logo Second Word, name: logoLast, widget: string }
+
+          - label: Navigation
+            name: nav
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Greeting, name: greeting, widget: string }
+              - { label: First Name, name: firstName, widget: string }
+              - { label: Last Name, name: lastName, widget: string }
+              - { label: Typed Roles, name: typedRoles, widget: list, field: { label: Role, name: role, widget: string } }
+              - { label: Bio, name: bio, widget: text }
+              - { label: Headshot, name: headshot, widget: image }
+              - label: Primary CTA
+                name: ctaPrimary
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+              - label: Secondary CTA
+                name: ctaSecondary
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+
+          - label: Social Links (leave blank to hide)
+            name: socials
+            widget: object
+            fields:
+              - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
+              - { label: Email address, name: email, widget: string, required: false }
+              - { label: Twitter URL, name: twitter, widget: string, required: false }
+              - { label: GitHub URL, name: github, widget: string, required: false }
+
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Section Title, name: title, widget: string }
+              - { label: Photo, name: image, widget: image }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Paragraphs, name: paragraphs, widget: list, field: { label: Paragraph, name: text, widget: text } }
+              - { label: Skills Tab List, name: skillsTab, widget: list, field: { label: Skill, name: text, widget: string } }
+              - label: Experience Tab List
+                name: experienceTab
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Meta (company + date), name: meta, widget: string }
+              - label: Education Tab List
+                name: educationTab
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Meta (institution + date), name: meta, widget: string }
+
+          - label: Experience Section Headings
+            name: experienceSection
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+
+          - label: Skills Section Headings
+            name: skillsSection
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+
+          - label: Projects Section Headings
+            name: projectsSection
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text }
+
+          - label: Education Section Headings
+            name: educationSection
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Section Title, name: title, widget: string }
+              - { label: Info Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Form Heading, name: formHeading, widget: string }
+              - { label: Formspree Endpoint, name: formspreeEndpoint, widget: string }
+              - { label: Location, name: location, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Phone (display), name: phoneDisplay, widget: string }
+              - { label: "Phone (tel: format)", name: phoneTel, widget: string }
+              - { label: LinkedIn URL, name: linkedinUrl, widget: string }
+              - { label: LinkedIn (display), name: linkedinDisplay, widget: string }
+
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Bio, name: bio, widget: text }
+              - { label: Location, name: location, widget: string }
+              - { label: Copyright Name, name: copyrightName, widget: string }
+              - label: Quick Links
+                name: quickLinks
+                widget: list
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Href, name: href, widget: string }
+
+  - name: experience
+    label: Experience
+    delete: false
+    editor: { preview: false }
+    files:
+      - label: Experience Timeline
+        name: experience
+        file: content/experience.json
+        format: json
+        fields:
+          - label: Timeline Entries
+            name: items
+            widget: list
+            fields:
+              - { label: Date, name: date, widget: string, hint: 'e.g. "Jan 2024 – Feb 2025"' }
+              - { label: Job Title, name: title, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Bullets, name: bullets, widget: list, field: { label: Bullet, name: text, widget: text } }
+
+  - name: skills
+    label: Skills
+    delete: false
+    editor: { preview: false }
+    files:
+      - label: Skill Cards
+        name: skills
+        file: content/skills.json
+        format: json
+        fields:
+          - label: Skills
+            name: items
+            widget: list
+            fields:
+              - { label: Font Awesome Icon Class, name: icon, widget: string, hint: 'e.g. "fas fa-users-cog"' }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+
+  - name: projects
+    label: Projects
+    delete: false
+    editor: { preview: false }
+    files:
+      - label: Project Cards
+        name: projects
+        file: content/projects.json
+        format: json
+        fields:
+          - label: Projects
+            name: items
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image }
+              - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string } }
+              - { label: Live URL, name: liveUrl, widget: string, required: false }
+              - { label: Code URL, name: codeUrl, widget: string, required: false }
+
+  - name: education
+    label: Education & Certifications
+    delete: false
+    editor: { preview: false }
+    files:
+      - label: Education Cards
+        name: education
+        file: content/education.json
+        format: json
+        fields:
+          - label: Entries
+            name: items
+            widget: list
+            fields:
+              - { label: Font Awesome Icon Class, name: icon, widget: string, hint: 'e.g. "fas fa-graduation-cap" or "fas fa-certificate"' }
+              - { label: Date, name: date, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle (institution), name: subtitle, widget: string }
+              - { label: Description, name: description, widget: text }

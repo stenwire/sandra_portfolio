@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "Employee Onboarding Enhancement",
+      "description": "Revamped the company's onboarding process to improve new hire integration and reduce initial turnover.",
+      "image": "/api/placeholder/400/220/tech/1",
+      "tags": ["HR", "Process Improvement", "Documentation"],
+      "liveUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "title": "Customer Feedback System",
+      "description": "Developed and implemented a structured system for collecting and analyzing customer feedback to drive service improvements.",
+      "image": "/api/placeholder/400/220/tech/2",
+      "tags": ["Customer Service", "Data Analysis", "Feedback Loop"],
+      "liveUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "title": "Online Community Growth Strategy",
+      "description": "Led a content and engagement strategy that resulted in a 25% increase in social media interaction for an online academy.",
+      "image": "/api/placeholder/400/220/tech/3",
+      "tags": ["Community Management", "Social Media", "Content Strategy"],
+      "liveUrl": "",
+      "codeUrl": ""
+    }
+  ]
+}

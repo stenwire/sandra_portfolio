@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "icon": "fas fa-users-cog",
+      "title": "HR Management",
+      "description": "Recruitment, onboarding, employee relations, record keeping, and development program coordination."
+    },
+    {
+      "icon": "fas fa-headset",
+      "title": "Customer Service",
+      "description": "Handling inquiries, resolving issues, maintaining satisfaction, and managing relationships (CRM)."
+    },
+    {
+      "icon": "fas fa-comments",
+      "title": "Community Engagement",
+      "description": "Building online communities, content strategy, fostering interaction, and managing feedback."
+    },
+    {
+      "icon": "fas fa-chart-line",
+      "title": "Data Analysis",
+      "description": "Proficient in Excel, data visualization tools, and basic statistical software for insights."
+    },
+    {
+      "icon": "fas fa-bullhorn",
+      "title": "Communication",
+      "description": "Strong written and verbal skills, adept at engaging diverse audiences effectively."
+    },
+    {
+      "icon": "fas fa-puzzle-piece",
+      "title": "Problem-Solving",
+      "description": "Ability to assess complex issues, devise effective solutions, and implement them efficiently."
+    },
+    {
+      "icon": "fas fa-users",
+      "title": "Leadership & Teamwork",
+      "description": "Effective collaborator and leader focused on enhancing group performance and achieving goals."
+    },
+    {
+      "icon": "fas fa-clock",
+      "title": "Time Management",
+      "description": "Skilled in managing multiple tasks, meeting deadlines, and ensuring accuracy in all duties."
+    },
+    {
+      "icon": "fas fa-tasks",
+      "title": "Project Management",
+      "description": "Understanding of project lifecycles, planning, and execution principles (Google Certified)."
+    }
+  ]
+}
