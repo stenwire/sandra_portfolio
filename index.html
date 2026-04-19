@@ -85,19 +85,13 @@
             -moz-osx-font-smoothing: grayscale;
             font-feature-settings: "ss01", "kern";
             overflow-x: hidden;
-            cursor: none;
-        }
-
-        @media (max-width: 900px), (hover: none) {
-            body { cursor: auto; }
         }
 
         ::selection { background: var(--accent); color: var(--paper); }
 
         a { color: inherit; text-decoration: none; }
         img { max-width: 100%; display: block; }
-        button { font: inherit; color: inherit; background: none; border: 0; cursor: none; }
-        @media (max-width: 900px), (hover: none) { button { cursor: pointer; } }
+        button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 
         /* ---- Paper grain overlay ---------------------------------------- */
         .grain {
@@ -109,33 +103,6 @@
             mix-blend-mode: multiply;
             background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
             background-size: 240px 240px;
-        }
-
-        /* ---- Custom cursor ---------------------------------------------- */
-        .cursor-dot, .cursor-ring {
-            position: fixed;
-            top: 0; left: 0;
-            pointer-events: none;
-            z-index: 10000;
-            translate: -50% -50%;
-            transition: scale .25s var(--ease), background-color .2s var(--ease);
-        }
-        .cursor-dot {
-            width: 6px; height: 6px;
-            background: var(--ink);
-            border-radius: 50%;
-        }
-        .cursor-ring {
-            width: 34px; height: 34px;
-            border: 1px solid var(--ink);
-            border-radius: 50%;
-            opacity: .55;
-            transition: scale .35s var(--ease), opacity .2s var(--ease), border-color .2s var(--ease);
-        }
-        body.is-hover .cursor-ring { scale: 1.6; border-color: var(--accent); opacity: 1; }
-        body.is-hover .cursor-dot  { background: var(--accent); scale: 0.6; }
-        @media (max-width: 900px), (hover: none) {
-            .cursor-dot, .cursor-ring { display: none; }
         }
 
         /* ---- Preloader -------------------------------------------------- */
@@ -909,9 +876,23 @@
             gap: 32px;
         }
         .work-card {
+            appearance: none;
+            background: none;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
             display: block;
             position: relative;
             grid-column: span 12;
+        }
+        .work-card:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 6px;
         }
         .work-card .wc-num {
             position: absolute;
@@ -976,6 +957,26 @@
             margin-top: 14px;
             max-width: 50ch;
         }
+        .wc-open {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            transition: gap .3s var(--ease), color .3s var(--ease);
+        }
+        .work-card:hover .wc-open { gap: 18px; color: var(--accent-ink); }
+        .wc-open .ar {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 15px;
+            letter-spacing: 0;
+            font-variation-settings: "opsz" 18, "SOFT" 100, "WONK" 1;
+        }
 
         @media (min-width: 900px) {
             .work-card.span-7 { grid-column: span 7; }
@@ -983,6 +984,215 @@
             .work-card.span-6 { grid-column: span 6; }
             .work-card.span-12 { grid-column: span 12; }
             .work-card.span-12 .wc-figure { aspect-ratio: 21 / 9; }
+        }
+
+        /* ============== Project Modal =================================== */
+        .project-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 300;
+            display: grid;
+            place-items: center;
+            padding: clamp(16px, 3vw, 40px);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .45s var(--ease), visibility .45s var(--ease);
+        }
+        body.modal-open .project-modal { visibility: visible; opacity: 1; }
+        body.modal-open { overflow: hidden; }
+
+        .pm-veil {
+            position: absolute;
+            inset: 0;
+            background: rgba(27, 24, 20, 0.58);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        .pm-panel {
+            position: relative;
+            background: var(--paper);
+            width: 100%;
+            max-width: 1080px;
+            max-height: min(90dvh, 900px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            border: 1px solid var(--rule);
+            box-shadow: 0 40px 120px -20px rgba(0, 0, 0, 0.55);
+            transform: translateY(24px) scale(0.98);
+            transition: transform .55s var(--ease);
+        }
+        body.modal-open .pm-panel { transform: translateY(0) scale(1); }
+
+        .pm-close {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            z-index: 3;
+            padding: 10px 16px;
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--ink);
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background .3s var(--ease), color .3s var(--ease);
+        }
+        .pm-close:hover { background: var(--ink); color: var(--paper); }
+
+        .pm-body {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 0;
+            min-height: 420px;
+        }
+
+        .pm-figure {
+            aspect-ratio: 4 / 5;
+            background: var(--paper-deep);
+            overflow: hidden;
+            position: relative;
+        }
+        .pm-figure svg, .pm-figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .pm-figure img {
+            filter: grayscale(0.4) sepia(0.18) contrast(1.05);
+            mix-blend-mode: multiply;
+        }
+
+        .pm-content {
+            padding: clamp(1.8rem, 3.5vw, 3rem);
+            padding-top: clamp(3rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .pm-num {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+        }
+
+        .pm-title {
+            font-family: var(--serif);
+            font-weight: 300;
+            font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+            line-height: 1.05;
+            letter-spacing: -0.022em;
+            font-variation-settings: "opsz" 80, "SOFT" 35, "WONK" 0;
+            color: var(--ink);
+        }
+        .pm-title em {
+            font-style: italic;
+            color: var(--accent);
+            font-variation-settings: "opsz" 80, "SOFT" 100, "WONK" 1;
+        }
+
+        .pm-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--rule);
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+        }
+        .pm-tags span + span::before {
+            content: '·';
+            margin-right: 12px;
+            color: var(--accent);
+        }
+
+        .pm-desc {
+            font-family: var(--serif);
+            font-weight: 350;
+            font-size: 1.08rem;
+            line-height: 1.6;
+            color: var(--ink);
+            font-variation-settings: "opsz" 18, "SOFT" 40, "WONK" 0;
+        }
+
+        .pm-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 22px;
+            border-top: 1px solid var(--rule);
+        }
+        .pm-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 22px;
+            border: 1px solid var(--ink);
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--ink);
+            background: transparent;
+            transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), letter-spacing .3s var(--ease);
+        }
+        .pm-link:hover {
+            background: var(--ink);
+            color: var(--paper);
+            letter-spacing: .26em;
+        }
+        .pm-link svg {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+        .pm-link.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--paper);
+        }
+        .pm-link.primary:hover {
+            background: var(--accent-ink);
+            border-color: var(--accent-ink);
+        }
+        .pm-link .ar {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 15px;
+            letter-spacing: 0;
+            font-variation-settings: "opsz" 18, "SOFT" 100, "WONK" 1;
+        }
+
+        .pm-none {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 0.98rem;
+            color: var(--ink-soft);
+            font-variation-settings: "opsz" 18, "SOFT" 100, "WONK" 1;
+            margin-top: auto;
+            padding-top: 22px;
+            border-top: 1px solid var(--rule);
+        }
+
+        @media (max-width: 820px) {
+            .pm-body { grid-template-columns: 1fr; }
+            .pm-figure { aspect-ratio: 16 / 10; }
+            .pm-close { top: 14px; right: 14px; padding: 8px 12px; font-size: 10px; }
+            .pm-content { padding-top: 2rem; }
         }
 
         /* ============== Credentials (Education) ========================= */
@@ -1290,7 +1500,6 @@
         @media (prefers-reduced-motion: reduce) {
             .js-on .reveal { opacity: 1; transform: none; transition: none; }
             .cover-headline .ln { opacity: 1 !important; transform: none !important; animation: none !important; }
-            .cursor-dot, .cursor-ring { display: none; }
         }
 
         /* ============== Responsive ======================================= */
@@ -1327,8 +1536,6 @@
 <body>
 
     <div class="grain" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
-    <div class="cursor-dot"  aria-hidden="true"></div>
 
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
@@ -1509,6 +1716,23 @@
         </div>
     </footer>
 
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="pm-veil" id="pmVeil"></div>
+        <article class="pm-panel" role="dialog" aria-modal="true" aria-labelledby="pmTitle" tabindex="-1">
+            <button type="button" class="pm-close" id="pmClose" aria-label="Close project">Close <span aria-hidden="true">✕</span></button>
+            <div class="pm-body">
+                <div class="pm-figure" id="pmFigure"></div>
+                <div class="pm-content">
+                    <span class="pm-num" id="pmNum"></span>
+                    <h2 class="pm-title" id="pmTitle"></h2>
+                    <div class="pm-tags" id="pmTags"></div>
+                    <p class="pm-desc" id="pmDesc"></p>
+                    <div class="pm-links" id="pmLinks"></div>
+                </div>
+            </div>
+        </article>
+    </div>
+
 <script>
 (async function () {
     const esc  = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => (
@@ -1607,10 +1831,17 @@
     document.getElementById('coverPortrait').src = hero.headshot || 'assets/images/headshot.png';
     document.getElementById('coverPortrait').alt = fullName;
 
+    const resolveHref = (h) => {
+        if (!h) return '#';
+        return (navMap[h] || h);
+    };
+    const isInternal = (h) => typeof h === 'string' && h.startsWith('#');
+    const extAttrs = (h) => isInternal(h) ? '' : ' target="_blank" rel="noopener noreferrer"';
+
     document.getElementById('coverActions').innerHTML =
-        (hero.ctaPrimary   ? '<a href="' + attr(hero.ctaPrimary.href)   + '" class="link-arrow" data-magnet>' + esc(hero.ctaPrimary.label) + ' <span class="ar">↘</span></a>' : '') +
-        (hero.ctaSecondary ? '<a href="' + attr(hero.ctaSecondary.href) + '" class="link-arrow" download data-magnet>' + esc(hero.ctaSecondary.label) + ' <span class="ar">↗</span></a>' : '') +
-        '<a href="#correspondence" class="link-arrow" data-magnet>Write a letter <span class="ar">→</span></a>';
+        (hero.ctaPrimary   ? '<a href="' + attr(resolveHref(hero.ctaPrimary.href))   + '" class="link-arrow"' + extAttrs(hero.ctaPrimary.href)   + '>' + esc(hero.ctaPrimary.label)   + ' <span class="ar">↘</span></a>' : '') +
+        (hero.ctaSecondary ? '<a href="' + attr(resolveHref(hero.ctaSecondary.href)) + '" class="link-arrow" download' + extAttrs(hero.ctaSecondary.href) + '>' + esc(hero.ctaSecondary.label) + ' <span class="ar">↗</span></a>' : '') +
+        '<a href="#correspondence" class="link-arrow">Write a letter <span class="ar">→</span></a>';
 
     /* ----- Marquee ------------------------------------------------- */
     const expertise = [
@@ -1743,30 +1974,104 @@
 
     const spans = ['span-7', 'span-5', 'span-12', 'span-6', 'span-6'];
 
+    const titleWithItalic = (t) => {
+        const parts = (t || '').split(' ');
+        const last = parts.pop();
+        const head = parts.join(' ');
+        return head ? esc(head) + ' <em>' + esc(last) + '</em>' : '<em>' + esc(last || '') + '</em>';
+    };
+
     document.getElementById('workGrid').innerHTML = projects.map((p, i) => {
-        const titleParts = (p.title || '').split(' ');
-        const lastWord = titleParts.pop();
-        const titleHead = titleParts.join(' ');
-        const titleHTML = titleHead
-            ? esc(titleHead) + ' <em>' + esc(lastWord) + '</em>'
-            : '<em>' + esc(lastWord) + '</em>';
         const figure = isPlaceholder(p.image)
             ? motifFor(i)
             : '<img src="' + attr(p.image) + '" alt="' + attr(p.title) + '">';
         const span = spans[i % spans.length];
-        const href = p.liveUrl || p.codeUrl || '#';
-        const ext = (p.liveUrl || p.codeUrl) ? ' target="_blank" rel="noopener"' : '';
 
-        return '<a class="work-card ' + span + ' reveal" href="' + attr(href) + '"' + ext + ' data-magnet>' +
+        return '<button type="button" class="work-card ' + span + ' reveal" data-project-idx="' + i + '" aria-label="Open details for ' + attr(p.title) + '">' +
             '<span class="wc-num">№ ' + String(i + 1).padStart(2, '0') + '</span>' +
             '<div class="wc-figure">' + figure + '</div>' +
             '<div class="wc-meta">' +
-                '<h3 class="wc-title">' + titleHTML + '</h3>' +
+                '<h3 class="wc-title">' + titleWithItalic(p.title) + '</h3>' +
                 '<div class="wc-tags">' + (p.tags || []).map(t => '<span>' + esc(t) + '</span>').join('') + '</div>' +
             '</div>' +
             '<p class="wc-desc">' + esc(p.description) + '</p>' +
-        '</a>';
+            '<span class="wc-open">Read more <span class="ar">→</span></span>' +
+        '</button>';
     }).join('');
+
+    /* ----- Project modal ----------------------------------------- */
+    const iconGithub = () =>
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-.98-.01-1.93-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.34.95.1-.74.4-1.25.73-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.87-.38.98 0 1.96.13 2.87.38 2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.74.11 3.03.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.13 0 1.54-.02 2.78-.02 3.16 0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>';
+    const iconExternal = () =>
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v2h5.59l-9.29 9.29 1.41 1.41L21 6.41V12h2V3h-9zM5 5v14h14v-7h-2v5H7V7h5V5H5z"/></svg>';
+
+    const modal     = document.getElementById('projectModal');
+    const pmVeil    = document.getElementById('pmVeil');
+    const pmClose   = document.getElementById('pmClose');
+    const pmFigure  = document.getElementById('pmFigure');
+    const pmNum     = document.getElementById('pmNum');
+    const pmTitle   = document.getElementById('pmTitle');
+    const pmTags    = document.getElementById('pmTags');
+    const pmDesc    = document.getElementById('pmDesc');
+    const pmLinks   = document.getElementById('pmLinks');
+    let lastFocused = null;
+
+    function openProjectModal(idx) {
+        const p = projects[idx];
+        if (!p) return;
+        lastFocused = document.activeElement;
+
+        pmNum.textContent   = '№ ' + String(idx + 1).padStart(2, '0') + ' · Case Study';
+        pmTitle.innerHTML   = titleWithItalic(p.title);
+        pmDesc.textContent  = p.description || '';
+        pmTags.innerHTML    = (p.tags || []).map(t => '<span>' + esc(t) + '</span>').join('');
+        pmFigure.innerHTML  = isPlaceholder(p.image)
+            ? motifFor(idx)
+            : '<img src="' + attr(p.image) + '" alt="' + attr(p.title) + '">';
+
+        const parts = [];
+        if (p.liveUrl) {
+            parts.push(
+                '<a class="pm-link primary" href="' + attr(p.liveUrl) + '" target="_blank" rel="noopener noreferrer">' +
+                    iconExternal() + '<span>View the project</span>' +
+                '</a>'
+            );
+        }
+        if (p.codeUrl) {
+            parts.push(
+                '<a class="pm-link" href="' + attr(p.codeUrl) + '" target="_blank" rel="noopener noreferrer">' +
+                    iconGithub() + '<span>Source on GitHub</span>' +
+                '</a>'
+            );
+        }
+        if (!parts.length) {
+            parts.push('<p class="pm-none">— A private engagement. Write for a walk-through.</p>');
+        }
+        pmLinks.innerHTML = parts.join('');
+
+        document.body.classList.add('modal-open');
+        modal.setAttribute('aria-hidden', 'false');
+        setTimeout(() => pmClose.focus(), 60);
+    }
+
+    function closeProjectModal() {
+        document.body.classList.remove('modal-open');
+        modal.setAttribute('aria-hidden', 'true');
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    document.getElementById('workGrid').addEventListener('click', (e) => {
+        const card = e.target.closest('[data-project-idx]');
+        if (!card) return;
+        openProjectModal(Number(card.dataset.projectIdx));
+    });
+    pmClose.addEventListener('click', closeProjectModal);
+    pmVeil.addEventListener('click', closeProjectModal);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.body.classList.contains('modal-open')) {
+            closeProjectModal();
+        }
+    });
 
     /* ----- Credentials / Education -------------------------------- */
     document.getElementById('credList').innerHTML = education.map(e => {
@@ -1931,37 +2236,6 @@
         }
     }
     setTimeout(tick, 1400);
-
-    // Custom cursor
-    const cDot  = document.querySelector('.cursor-dot');
-    const cRing = document.querySelector('.cursor-ring');
-    let mx = window.innerWidth/2, my = window.innerHeight/2;
-    let rx = mx, ry = my;
-    const isCoarse = window.matchMedia('(hover: none), (max-width: 900px)').matches;
-    if (!isCoarse) {
-        window.addEventListener('mousemove', (e) => {
-            mx = e.clientX; my = e.clientY;
-            cDot.style.transform = `translate(${mx}px, ${my}px) translate(-50%, -50%)`;
-        });
-        const loop = () => {
-            rx += (mx - rx) * 0.18;
-            ry += (my - ry) * 0.18;
-            cRing.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
-            requestAnimationFrame(loop);
-        };
-        loop();
-        document.addEventListener('mouseover', (e) => {
-            const t = e.target.closest('a, button, [data-magnet], input, textarea');
-            if (t) document.body.classList.add('is-hover');
-        });
-        document.addEventListener('mouseout', (e) => {
-            const t = e.target.closest('a, button, [data-magnet], input, textarea');
-            if (t) document.body.classList.remove('is-hover');
-        });
-    }
-
-    // Cover entrance
-    requestAnimationFrame(() => document.querySelector('.cover').classList.add('ready'));
 
     // Hide preloader
     setTimeout(() => {
